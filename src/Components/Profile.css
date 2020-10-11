@@ -1,0 +1,10 @@
+.profile{
+    grid-area: c;
+    background-color: cadetblue;
+}
+.fon img{
+    width: 300px;
+}
+.logo img{
+    width: 90px;
+}

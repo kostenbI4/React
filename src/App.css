@@ -7,27 +7,8 @@
   "n c";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
+  grid-gap: 3px;
 }
-.header{
-  grid-area: h;
-  background-color: cadetblue;
-}
-.header img{
-  width: 80px;
-}
-.fon img{
-  width: 300px;
-}
-.logo img{
-  width: 90px;
 
-}
-.nav{
-  grid-area: n;
-  background-color: cadetblue;
-}
-.profile{
-  grid-area: c;
-  background-color: cadetblue;
-}
+
+
