@@ -11,3 +11,13 @@
 .item a.active{
     color: gold;
 }
+
+.friends {
+    margin-top: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
