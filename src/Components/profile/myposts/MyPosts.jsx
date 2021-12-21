@@ -3,6 +3,7 @@ import s from './MyPosts.module.css'
 import Post from "./post/Post";
 
 const createArr = function (el) {
+
     let arra = el.map((e) => <Post message={e.message} likeCounts={e.likeCounts}/>);
     /*for (let a of el){
         arra.push(<Post message={a.message} likeCounts={a.likeCounts}/>)
@@ -10,12 +11,20 @@ const createArr = function (el) {
     return arra;
 }
 
+
 const MyPosts = (props) => {
     let addPost = () => {
-        debugger;
         let text = newPostElement.current.value;
-        alert(text);
+        props.addPost(text);
+        props.updateNewPostText('');
+        // newPostElement.current.value = "";
     }
+
+    let onPostChanges = () => {
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+
 
     let newPostElement = React.createRef(); //создаем ссылку
 
@@ -24,7 +33,7 @@ const MyPosts = (props) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChanges} ref={newPostElement} value={props.newPostText}/>
                 </div>
                 <div>
                     <button onClick={addPost}>Add post</button>
