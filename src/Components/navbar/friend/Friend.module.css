@@ -1,0 +1,13 @@
+.imageDiv{
+    text-align: center;
+}
+
+.imageDiv img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.name {
+    text-align: center;
+}
